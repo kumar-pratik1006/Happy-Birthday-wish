@@ -136,6 +136,8 @@ svg.line{fill: none;stroke-width: 2;animation: moving .7s linear infinite altern
 
 <body>
 
+    <div id="countdown" style="text-align:center; color:white; font-size:20px; margin-top:20px;"></div>
+
   <!-- Ganti Audio di sini -->
   <audio src="" id="linkmp3" class="sembunyi"></audio>
 
@@ -408,6 +410,29 @@ function multifungsi(){
   function pgmuncul(){pergeseran.style="position:relative;opacity:1;transform:scale(1);";setTimeout(munculkembali,500)}
 
   function bqhilang() { wallpaper.style = "transform: scale(2);"; bodyblur.style = "opacity:.3"; bq.style = "position:relative;transition:all .7s ease;"; }
+
+      // Target birthday date (yyyy, mm-1, dd, hh, mm, ss) - month is 0-indexed
+var birthdayDate = new Date(2025, 4, 06, 19, 18, 0).getTime(); // e.g., May 10, 2025
+
+var countdownFunction = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = birthdayDate - now;
+
+  if (distance < 0) {
+    clearInterval(countdownFunction);
+    document.getElementById("countdown").innerHTML = "Happy Birthday! 🥳";
+    return;
+  }
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML = 
+    "Countdown: " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+}, 1000);
+      
 
   </script>
 </body>
