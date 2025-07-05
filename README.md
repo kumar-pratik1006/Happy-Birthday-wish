@@ -1,4 +1,4 @@
-![Screenshot 2025-07-05 093459](https://github.com/user-attachments/assets/0e151b28-d3ff-480b-bec2-bccf7ff34c40)# 🎉 Birthday Greeting Web App
+# 🎉 Birthday Greeting Web App
 
 A fun, interactive, and heartwarming birthday greeting site built with love! 🥳  
 Visit the live site: [bdaybday.vercel.app](https://bdaybday.vercel.app)
